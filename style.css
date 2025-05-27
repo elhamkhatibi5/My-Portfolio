@@ -1,4 +1,4 @@
-Elham khatibi, [5/26/2025 8:30 PM]
+
 /* =================================
    General Reset & Base Styles
    ================================= */
@@ -198,6 +198,21 @@ footer {
    ================================= */
 @media (max-width: 768px) {
   .nav {
+     .nav {
+  display: flex !important;
+  flex-direction: row !important; /* حتما افقی */
+  justify-content: center;
+  gap: 2rem; /* فاصله بین آیتم‌ها */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: row !important; /* حتی در موبایل هم افقی */
+  }
+}
     flex-direction: column;
     gap: 1.5rem;
   }
@@ -206,7 +221,7 @@ footer {
     padding: 2rem 1rem;
   }
 
-Elham khatibi, [5/26/2025 8:30 PM]
+
 .section {
     padding: 1.5rem 1.5rem;
   }
