@@ -1,4 +1,3 @@
-
 /* =================================
    General Reset & Base Styles
    ================================= */
@@ -13,7 +12,7 @@ body {
   background: linear-gradient(
     135deg,
     #9b59b6 0%,       /* Light Purple */
-    #6b11cba8 40%,    /* Deep Purple */
+    #6b11cb a8 40%,    /* Deep Purple */
     #2c3e50 70%,      /* Dark Blue-Black */
     #f39c12 90%       /* Light Orange */
   );
@@ -198,31 +197,17 @@ footer {
    ================================= */
 @media (max-width: 768px) {
   .nav {
-     .nav {
-  display: flex !important;
-  flex-direction: row !important; /* حتما افقی */
-  justify-content: center;
-  gap: 2rem; /* فاصله بین آیتم‌ها */
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-@media (max-width: 768px) {
-  .nav {
-    flex-direction: row !important; /* حتی در موبایل هم افقی */
-  }
-}
-    flex-direction: column;
+    flex-direction: row;   /* منو همیشه افقی */
     gap: 1.5rem;
+    flex-wrap: wrap;      /* اگر جا کم بود خط بعدی */
+    justify-content: center;
   }
 
   main {
     padding: 2rem 1rem;
   }
 
-
-.section {
+  .section {
     padding: 1.5rem 1.5rem;
   }
 }
