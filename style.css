@@ -61,10 +61,10 @@ nav {
 
 .nav li a:hover,
 .nav li a:focus {
-  background-color: #ffca28; /* brighter yellow */
-  color: #2c3e50;
+  background-color: #6b11cb; /* Deep Purple */
+  color: #f39c12; /* Light Orange */
   outline: none;
-  text-shadow: none;
+  text-shadow: 0 0 10px rgba(243, 156, 18, 0.9);
 }
 
 /* =================================
