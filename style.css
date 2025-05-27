@@ -16,11 +16,12 @@ body {
     #2c3e50 70%,      /* Dark Blue-Black */
     #f39c12 90%       /* Light Orange */
   );
-  color: #f0e9f7; /* softer off-white instead of pure white */
+  color: #ffffff; /* pure white */
   line-height: 1.6;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  text-shadow: 0 0 6px rgba(0,0,0,0.9);
 }
 
 /* =================================
@@ -29,12 +30,12 @@ body {
 nav {
   background: linear-gradient(
     90deg,
-    rgba(44, 62, 80, 0.9) 0%,
-    rgba(107, 33, 203, 0.7) 50%,
-    rgba(243, 156, 18, 0.8) 100%
+    rgba(44, 62, 80, 0.95) 0%,
+    rgba(107, 33, 203, 0.85) 50%,
+    rgba(243, 156, 18, 0.95) 100%
   );
   padding: 1rem 2rem;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.7);
   border-radius: 12px;
   margin: 1rem 2rem;
 }
@@ -48,21 +49,22 @@ nav {
 
 .nav li a {
   text-decoration: none;
-  color: #f0e9f7; /* softer off-white */
+  color: #ffffff;
   font-weight: 700;
   font-family: 'Playfair Display', serif;
   font-size: 1.2rem;
   padding: 0.3rem 0.8rem;
   border-radius: 8px;
   transition: background-color 0.3s ease, color 0.3s ease;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  text-shadow: 0 0 7px rgba(0,0,0,0.9);
 }
 
 .nav li a:hover,
 .nav li a:focus {
-  background-color: #f39c12;
+  background-color: #ffca28; /* brighter yellow */
   color: #2c3e50;
   outline: none;
+  text-shadow: none;
 }
 
 /* =================================
@@ -74,27 +76,23 @@ main {
   max-width: 960px;
   margin: 0 auto;
   width: 100%;
-  background: linear-gradient(
-    135deg,
-    rgba(173, 216, 230, 0.2) 0%, /* Very Light Blue */
-    rgba(243, 156, 18, 0.15) 100%
-  );
+  background: rgba(44, 62, 80, 0.85); /* solid dark bg for best contrast */
   border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(44, 62, 80, 0.6);
-  color: #f0e9f7; /* softer off-white */
+  box-shadow: 0 6px 25px rgba(0,0,0,0.8);
+  color: #ffffff;
   font-family: 'Roboto', sans-serif;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  text-shadow: 0 0 8px rgba(0,0,0,0.9);
 }
 
 .section {
-  background: rgba(44, 62, 80, 0.7); /* darker translucent background for readability */
+  background: rgba(20, 30, 45, 0.95); /* darker, nearly solid bg */
   padding: 2rem 3rem;
   border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(44, 62, 80, 0.6);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.8);
   margin-bottom: 3rem;
   font-family: 'Roboto', sans-serif;
-  color: #f0e9f7;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(0,0,0,0.9);
 }
 
 .section h1,
@@ -103,9 +101,9 @@ main {
   font-weight: 700;
   font-size: 2.5rem;
   margin-bottom: 1.2rem;
-  color: #f39c12;
+  color: #ffca28; /* bright yellow */
   text-align: center;
-  text-shadow: 0 1px 5px rgba(0,0,0,0.6);
+  text-shadow: 0 0 12px rgba(0,0,0,1);
 }
 
 /* =================================
@@ -115,23 +113,19 @@ form {
   max-width: 500px;
   margin: 0 auto;
   text-align: left;
-  background: linear-gradient(
-    135deg,
-    rgba(107, 33, 203, 0.4) 0%,
-    rgba(44, 62, 80, 0.3) 100%
-  );
+  background: rgba(44, 62, 80, 0.95);
   padding: 1.5rem 2rem;
   border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  color: #f0e9f7;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.7);
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(0,0,0,0.9);
 }
 
 label {
   font-weight: 600;
   display: block;
   margin-bottom: 0.3rem;
-  color: #f0e9f7;
+  color: #ffffff;
 }
 
 input[type="text"],
@@ -144,14 +138,14 @@ textarea {
   font-size: 1rem;
   font-family: 'Roboto', sans-serif;
   margin-bottom: 1rem;
-  background: rgba(255,255,255,0.95);
+  background: #fff;
   color: #2c3e50;
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-  outline: 2px solid #f39c12;
+  outline: 2px solid #ffca28;
   background: #fff;
   color: #2c3e50;
 }
@@ -161,7 +155,7 @@ textarea {
 }
 
 button[type="submit"] {
-  background: #f39c12;
+  background: #ffca28;
   color: #2c3e50;
   font-weight: 700;
   padding: 0.8rem 1.8rem;
@@ -172,10 +166,11 @@ button[type="submit"] {
   transition: background-color 0.3s ease, color 0.3s ease;
   display: block;
   margin: 0 auto;
+  text-shadow: none;
 }
 
 button[type="submit"]:hover {
-  background: #fff;
+  background: #ffffff;
   color: #6a11cb;
 }
 
@@ -187,11 +182,11 @@ footer {
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
-  color: #ffda72; /* softer warm yellow */
+  color: #ffca28; /* bright yellow */
   font-family: 'Roboto', sans-serif;
   border-radius: 8px;
   margin: 1rem 2rem 0 2rem;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  text-shadow: 0 0 7px rgba(0,0,0,0.9);
 }
 
 /* =================================
@@ -199,9 +194,9 @@ footer {
    ================================= */
 @media (max-width: 768px) {
   .nav {
-    flex-direction: row;   /* منو همیشه افقی */
+    flex-direction: row;
     gap: 1.5rem;
-    flex-wrap: wrap;      /* اگر جا کم بود خط بعدی */
+    flex-wrap: wrap;
     justify-content: center;
   }
 
