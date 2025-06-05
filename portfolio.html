@@ -4,29 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Elham Khatibi | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav role="navigation" aria-label="Main Navigation">
-    <ul class="nav">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Me</a></li>
-      <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">Elham.dev</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <main>
-    <section class="section" id="portfolio-intro">
+  <main class="container">
+    <section class="section portfolio-intro">
       <h2>My Professional Portfolio</h2>
       <p>Welcome! I'm Elham Khatibi, a passionate web designer and former budget manager at Heart University with a deep love for technology and continuous learning. With strong skills in computer systems and web design, I blend creativity with precision to deliver quality digital solutions.</p>
       <p>Currently, I'm also expanding my language skills as an active TOEFL learner, enhancing my communication and global connectivity.</p>
     </section>
 
-    <section class="section" id="skills">
+    <section class="section skills">
       <h2>My Skills & Expertise</h2>
-      <ul>
+      <ul class="skills-list">
         <li><strong>Web Design:</strong> HTML5, CSS3, Responsive Design, UX/UI principles</li>
         <li><strong>Project Management:</strong> Budget planning, resource allocation, timeline management</li>
         <li><strong>Technical Skills:</strong> Computer troubleshooting, software proficiency, digital tools</li>
@@ -35,32 +38,34 @@
       </ul>
     </section>
 
-    <section class="section" id="projects">
+    <section class="section projects">
       <h2>Selected Projects</h2>
       <div class="projects-grid">
-        <article class="project-card">
+        <div class="project-card">
           <h3>Personal Portfolio Website</h3>
           <p>Designed and developed a responsive multi-page portfolio website using only HTML and CSS. Showcases my skills, projects, and professional story with creative visuals and smooth navigation.</p>
-          <a href="https://github.com/yourusername/portfolio" target="_blank" rel="noopener noreferrer">View on GitHub</a>
-        </article>
+          <a href="https://github.com/yourusername/portfolio" target="_blank">View on GitHub</a>
+        </div>
 
-        <article class="project-card">
+        <div class="project-card">
           <h3>Budget Management Dashboard</h3>
           <p>Led the creation of a budget tracking dashboard for Heart University, integrating data visualization to monitor expenditures and optimize resources effectively.</p>
           <em>Confidential Project</em>
-        </article>
+        </div>
 
-        <article class="project-card">
+        <div class="project-card">
           <h3>Responsive Recipe Website</h3>
           <p>Developed a multi-page recipe website demonstrating HTML structuring and CSS Grid for layout, focusing on clean design and usability.</p>
-          <a href="https://github.com/yourusername/recipe-website" target="_blank" rel="noopener noreferrer">View on GitHub</a>
-        </article>
+          <a href="https://github.com/yourusername/recipe-website" target="_blank">View on GitHub</a>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    &copy; 2025 Elham Khatibi. All rights reserved.
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Elham Khatibi. All rights reserved.</p>
+    </div>
   </footer>
 </body>
 </html>
