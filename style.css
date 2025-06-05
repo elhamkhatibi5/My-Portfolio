@@ -1,29 +1,23 @@
-/* Global Reset (/* Global Reset */
+/* ===== Global Reset ===== */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Body Style */
+/* ===== Body ===== */
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: #000; /* مشکی کامل */
+  color: #ffeb3b; /* زرد روشن */
   line-height: 1.6;
-  background: linear-gradient(to right, #0f0c29, #302b63, #24243e); /* Black to deep purple/blue */
-  color: #e0e0f8;
-  min-height: 100vh;
-  padding-bottom: 4rem;
 }
 
-/* Header Navigation */
+/* ===== Header Navigation ===== */
 .main-nav {
-  width: 100%;
-  background-color: #0d0b2d;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  border-bottom: 2px solid #6c5ce7;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  background-color: #111; /* مشکی تیره */
+  padding: 1rem 0;
+  box-shadow: 0 2px 10px rgba(255, 235, 59, 0.2); /* سایه زرد */
 }
 
 .nav {
@@ -31,7 +25,6 @@ body {
   justify-content: center;
   align-items: center;
   list-style: none;
-  padding: 1.2rem 0;
   flex-wrap: wrap;
 }
 
@@ -40,59 +33,39 @@ body {
 }
 
 .nav a {
-  color: #dfe6fd;
+  color: #ffeb3b;
   text-decoration: none;
-  font-size: 1.1rem;
   font-weight: bold;
-  position: relative;
-  transition: all 0.3s ease-in-out;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
 }
 
 .nav a:hover,
 .nav a[aria-current="page"] {
-  color: #70a1ff;
+  color: #ffd600; /* زرد طلایی */
 }
 
-.nav a::after {
-  content: "";
-  display: block;
-  height: 2px;
-  width: 0;
-  background: #6c5ce7;
-  transition: width 0.3s ease;
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-}
-
-.nav a:hover::after,
-.nav a[aria-current="page"]::after {
-  width: 100%;
-}
-
-/* Section Style */
+/* ===== Main Section ===== */
 .section {
   max-width: 1000px;
   margin: 2rem auto;
   padding: 2rem;
-  background: #1e1e3f;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-  color: #ffffff;
+  background-color: #1a1a1a; /* خاکستری خیلی تیره */
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 235, 59, 0.1); /* درخشش زرد لطیف */
 }
 
-/* Footer */
+/* ===== Footer ===== */
 footer {
+  background-color: #111;
+  color: #ffeb3b;
   text-align: center;
   padding: 1rem;
-  background-color: #0d0b2d;
-  color: #ccc;
+  margin-top: 2rem;
   font-size: 0.9rem;
-  margin-top: 3rem;
-  border-top: 1px solid #6c5ce7;
 }
 
-/* Responsive */
+/* ===== Responsive for Mobile ===== */
 @media (max-width: 600px) {
   .nav {
     flex-direction: column;
@@ -105,81 +78,5 @@ footer {
 
   .section {
     padding: 1.5rem 1rem;
-  }
-} but helps) */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-/* Body style */
-body {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
-}
-
-/* Header Navigation */
-.main-nav {
-  width: 100%;
-  background-color: #2c2c54; /* مشکی-بنفش تیره */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-.nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  padding: 1rem 0;
-  flex-wrap: wrap; /* برای موبایل */
-}
-
-.nav li {
-  margin: 0 1.5rem;
-}
-
-.nav a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.nav a:hover,
-.nav a[aria-current="page"] {
-  color: #6c5ce7; /* آبی-بنفش برای هاور و صفحه فعال */
-}
-
-/* Section style */
-.section {
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 1rem;
-  background-color: #fff;
-  border-radius: 8px;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #2c2c54;
-  color: white;
-  margin-top: 2rem;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  .nav {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .nav li {
-    margin: 0.5rem 0;
   }
 }
