@@ -1,3 +1,19 @@
+/* Make sure html and body take full height */
+html, body {
+  height: 100%;
+}
+
+/* Use Flexbox to push footer to the bottom */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content should grow to fill available space */
+main {
+  flex: 1;
+}
+
 /* ===== Root Colors and Fonts ===== */
 :root {
   --black: #0d0d0d;
