@@ -1,220 +1,77 @@
-/* Make sure html and body take full height */
-html, body {
-  height: 100%;
-}
-
-/* Use Flexbox to push footer to the bottom */
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Main content should grow to fill available space */
-main {
-  flex: 1;
-}
-
-/* ===== Root Colors and Fonts ===== */
-:root {
-  --black: #0d0d0d;
-  --purple: #7f00ff;
-  --blue: #0099ff;
-  --white: #ffffff;
-  --text-light: #e0e0e0;
-  --bg-dark: #1a1a1a;
-  --gray: #cccccc;
-  --font-main: 'Open Sans', sans-serif;
-  --font-heading: 'Poppins', sans-serif;
-}
-
-/* ===== Global Reset ===== */
+/* Global Reset (optional but helps) */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
+/* Body style */
 body {
-  background-color: var(--black);
-  color: var(--text-light);
-  font-family: var(--font-main);
+  font-family: 'Roboto', sans-serif;
   line-height: 1.6;
-  font-size: 16px;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
-/* ===== Container ===== */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem 0;
+/* Header Navigation */
+.main-nav {
+  width: 100%;
+  background-color: #2c2c54; /* مشکی-بنفش تیره */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* ===== Navbar ===== */
-.navbar {
-  background-color: var(--bg-dark);
-  border-bottom: 2px solid var(--purple);
-  padding: 1rem 0;
-}
-
-.navbar .container {
+.nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-}
-
-.logo {
-  font-family: var(--font-heading);
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: var(--purple);
-  text-decoration: none;
-}
-
-.nav-links {
   list-style: none;
-  display: flex;
-  gap: 1.5rem;
+  padding: 1rem 0;
+  flex-wrap: wrap; /* برای موبایل */
 }
 
-.nav-links a {
-  color: var(--text-light);
+.nav li {
+  margin: 0 1.5rem;
+}
+
+.nav a {
+  color: #fff;
   text-decoration: none;
-  transition: color 0.3s ease;
-  font-weight: 600;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-  color: var(--blue);
-}
-
-/* ===== Sections ===== */
-.section {
-  padding: 3rem 0;
-}
-
-h1, h2, h3 {
-  font-family: var(--font-heading);
-  color: var(--white);
-  margin-bottom: 1rem;
-}
-
-p {
-  margin-bottom: 1rem;
-}
-
-/* ===== Skills List ===== */
-.skills-list {
-  list-style-type: disc;
-  padding-left: 1.5rem;
-}
-
-/* ===== Projects Grid ===== */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-
-.project-card {
-  background-color: var(--bg-dark);
-  border: 1px solid var(--blue);
-  border-radius: 10px;
-  padding: 1.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 20px rgba(0, 153, 255, 0.3);
-}
-
-.project-card a {
-  color: var(--blue);
-  text-decoration: underline;
-  font-weight: 600;
-}
-
-/* ===== Button with Gradient Hover ===== */
-.gradient-hover {
-  position: relative;
-  display: inline-block;
-  background: transparent;
-  color: var(--white);
-  padding: 0.6rem 1.2rem;
-  border: 2px solid var(--purple);
-  border-radius: 6px;
+  font-size: 1.1rem;
   font-weight: bold;
-  overflow: hidden;
-  z-index: 0;
-  transition: color 0.4s ease;
+  transition: color 0.3s ease;
 }
 
-.gradient-hover::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 200%;
-  height: 100%;
-  background: linear-gradient(to right, var(--purple), var(--blue));
-  z-index: -1;
-  transition: left 0.4s ease;
+.nav a:hover,
+.nav a[aria-current="page"] {
+  color: #6c5ce7; /* آبی-بنفش برای هاور و صفحه فعال */
 }
 
-.gradient-hover:hover::before {
-  left: 0;
+/* Section style */
+.section {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
 }
 
-.gradient-hover:hover {
-  color: var(--black);
-}
-
-/* ===== Footer ===== */
-.footer {
-  background-color: #111;
+/* Footer */
+footer {
   text-align: center;
   padding: 1rem;
-  font-size: 0.9rem;
-  color: var(--gray);
+  background-color: #2c2c54;
+  color: white;
+  margin-top: 2rem;
 }
 
-/* ===== Responsive Styling ===== */
-@media (max-width: 768px) {
-  .nav-links {
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
     flex-direction: column;
-    align-items: flex-start;
     gap: 1rem;
-    margin-top: 1rem;
   }
 
-  h2 {
-    font-size: 1.5rem;
+  .nav li {
+    margin: 0.5rem 0;
   }
-
-  p, li {
-    font-size: 0.95rem;
-  }
-
-  .section {
-    padding: 2rem 0;
-  }
-
-  .project-card {
-    padding: 1rem;
-  }
-
-  .logo {
-    font-size: 1.5rem;
-  }
-}
-.contact-section {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-  background-color: var(--bg-dark);
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
