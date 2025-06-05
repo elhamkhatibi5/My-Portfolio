@@ -1,82 +1,80 @@
-/* ===== Global Reset ===== */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* Global Reset (optional but helps) */
+
+{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
 }
 
-/* ===== Body ===== */
+
+/* Body style */
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #000; /* مشکی کامل */
-  color: #ffeb3b; /* زرد روشن */
-  line-height: 1.6;
+font-family: 'Roboto', sans-serif;
+line-height: 1.6;
+background-color: #f4f4f4;
+color: #333;
 }
 
-/* ===== Header Navigation ===== */
+/* Header Navigation /
 .main-nav {
-  background-color: #111; /* مشکی تیره */
-  padding: 1rem 0;
-  box-shadow: 0 2px 10px rgba(255, 235, 59, 0.2); /* سایه زرد */
+width: 100%;
+background-color: #2c2c54; / مشکی-بنفش تیره */
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  flex-wrap: wrap;
+display: flex;
+justify-content: center;
+align-items: center;
+list-style: none;
+padding: 1rem 0;
+flex-wrap: wrap; /* برای موبایل */
 }
 
 .nav li {
-  margin: 0 1.5rem;
+margin: 0 1.5rem;
 }
 
 .nav a {
-  color: #ffeb3b;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
+color: #fff;
+text-decoration: none;
+font-size: 1.1rem;
+font-weight: bold;
+transition: color 0.3s ease;
 }
 
 .nav a:hover,
 .nav a[aria-current="page"] {
-  color: #ffd600; /* زرد طلایی */
+color: #6c5ce7; /* آبی-بنفش برای هاور و صفحه فعال */
 }
 
-/* ===== Main Section ===== */
+/* Section style */
 .section {
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: #1a1a1a; /* خاکستری خیلی تیره */
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(255, 235, 59, 0.1); /* درخشش زرد لطیف */
+max-width: 1000px;
+margin: 2rem auto;
+padding: 1rem;
+background-color: #fff;
+border-radius: 8px;
 }
 
-/* ===== Footer ===== */
+/* Footer */
 footer {
-  background-color: #111;
-  color: #ffeb3b;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-  font-size: 0.9rem;
+text-align: center;
+padding: 1rem;
+background-color: #2c2c54;
+color: white;
+margin-top: 2rem;
 }
 
-/* ===== Responsive for Mobile ===== */
+/* Responsive */
 @media (max-width: 600px) {
-  .nav {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .nav li {
-    margin: 0.5rem 0;
-  }
-
-  .section {
-    padding: 1.5rem 1rem;
-  }
+.nav {
+flex-direction: column;
+gap: 1rem;
 }
+
+.nav li {
+margin: 0.5rem 0;
+}
+} i want unique css style with black purplue and blue update it
+
