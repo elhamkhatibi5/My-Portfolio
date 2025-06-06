@@ -1,3 +1,17 @@
+body {
+  color: #000000; /* رنگ مشکی برای کل متن */
+  background-color: #ffffff; /* پس‌زمینه سفید */
+}
+
+a {
+  color: #000000; /* رنگ مشکی برای لینک‌ها */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #333333; /* موقع هاور یه رنگ تیره‌تر */
+  text-decoration: underline;
+}
 /* Global Reset (optional but helps) */
 
 {
