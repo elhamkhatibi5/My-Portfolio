@@ -1,50 +1,96 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Elham Khatibi | Contact</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me | Elham Khatibi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+    }.contact-container {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.contact-container p {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  resize: vertical;
+}
+
+button {
+  padding: 14px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 640px) {
+  .contact-container {
+    padding: 20px;
+    margin: 30px 10px;
+  }
+}
+
+  </style>
 </head>
 <body>
-  <nav role="navigation" aria-label="Main Navigation">
-    <ul class="nav">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Me</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="contact.html" aria-current="page">Contact</a></li>
-    </ul>
-  </nav>
+  <section class="contact-container">
+    <h2>Contact Me</h2>
+    <p>If you'd like to get in touch, feel free to fill out the form below!</p>
+    <form action="mailto:youremail@example.com" method="POST" enctype="text/plain">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required><label for="email">Your Email</label>
+  <input type="email" id="email" name="email" required>
 
-  <main>
-    <section class="contact-container">
-      <h2>Contact Me</h2>
-      <p>If you have a question, collaboration idea, or just want to say hello, feel free to send me a message using the form below!</p>
+  <label for="message">Your Message</label>
+  <textarea id="message" name="message" rows="6" required></textarea>
 
-      <form action="#" method="post" novalidate aria-labelledby="contact-heading">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required placeholder="Your full name" />
-        </div>
+  <button type="submit">Send Message</button>
+</form>
 
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required placeholder="your.email@example.com" />
-        </div>
-
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required placeholder="Write your message here..."></textarea>
-        </div>
-
-        <button type="submit" name="submit">Send Message</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    &copy; 2025 Elham Khatibi. All rights reserved.
-  </footer>
+  </section>
 </body>
 </html>
