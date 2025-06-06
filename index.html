@@ -3,30 +3,128 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Elham Khatibi | Home</title>
+  <title>Elham Khatibi | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Hamburger Icon */
+    .hamburger {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .hamburger div {
+      width: 30px;
+      height: 4px;
+      background-color: black;
+      margin: 6px 0;
+    }
+
+    /* Sidebar Navigation */
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #f4f4f4;
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 1000;
+    }
+
+    .sidebar a {
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 18px;
+      color: black;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #ddd;
+    }
+
+    main {
+      padding: 60px 40px;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+  </style>
 </head>
 <body>
-  <nav role="navigation" aria-label="Main Navigation">
-    <ul class="nav">
-      <li><a href="index.html" aria-current="page">Home</a></li>
-      <li><a href="about.html">About Me</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+
+  <!-- Hamburger Icon -->
+  <div class="hamburger" onclick="toggleSidebar()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- Sidebar Menu -->
+  <nav id="mySidebar" class="sidebar" role="navigation" aria-label="Main Navigation">
+    <a href="#home">Home</a>
+    <a href="#about">About Me</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
   </nav>
 
   <main>
-    <section class="section" id="home">
+    <!-- Home Section -->
+    <section id="home">
       <h2>Welcome to My Website</h2>
-      <p>Hello, I'm Elham Khatibi. I'm passionate about web design, creativity, and turning ideas into visual experiences. Explore my portfolio to see my work, get to know me through the About section, or reach out via the Contact page.</p>
+      <p>Hello, I'm Elham Khatibi. I'm passionate about web design, creativity, and turning ideas into visual experiences.</p>
       <p>This site is a small reflection of my creativity, skill, and journey as a designer.</p>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am a designer with a strong interest in front-end development and visual storytelling. I enjoy combining design with functionality to create beautiful and user-friendly websites.</p>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+      <h2>My Portfolio</h2>
+      <p>Here you can see some of the projects I’ve worked on. I love clean, responsive, and elegant designs.</p>
+      <!-- You can add project images and links here -->
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>If you'd like to get in touch, feel free to email me or connect on social media.</p>
+      <!-- Add contact form or email here -->
     </section>
   </main>
 
   <footer>
     &copy; 2025 Elham Khatibi. All rights reserved.
   </footer>
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById("mySidebar");
+      sidebar.style.width = sidebar.style.width === "250px" ? "0" : "250px";
+    }
+  </script>
 </body>
 </html>
