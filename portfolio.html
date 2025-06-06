@@ -2,64 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Elham Khatibi | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav role="navigation" aria-label="Main Navigation">
-    <ul class="nav">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Me</a></li>
-      <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <header>
+    <div class="logo">Elham Khatibi</div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <nav id="nav-links">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <main>
-    <section class="section" id="portfolio-intro">
-      <h2>My Professional Portfolio</h2>
-      <p>Welcome! I'm Elham Khatibi, a passionate web designer and former budget manager at Heart University with a deep love for technology and continuous learning. With strong skills in computer systems and web design, I blend creativity with precision to deliver quality digital solutions.</p>
-      <p>Currently, I'm also expanding my language skills as an active TOEFL learner, enhancing my communication and global connectivity.</p>
-    </section>
-
-    <section class="section" id="skills">
-      <h2>My Skills & Expertise</h2>
-      <ul>
-        <li><strong>Web Design:</strong> HTML5, CSS3, Responsive Design, UX/UI principles</li>
-        <li><strong>Project Management:</strong> Budget planning, resource allocation, timeline management</li>
-        <li><strong>Technical Skills:</strong> Computer troubleshooting, software proficiency, digital tools</li>
-        <li><strong>Languages:</strong> English (TOEFL learner), Arabic (native)</li>
-        <li><strong>Soft Skills:</strong> Creativity, problem-solving, teamwork, adaptability</li>
-      </ul>
-    </section>
-
-    <section class="section" id="projects">
-      <h2>Selected Projects</h2>
-
-      <article class="project-card">
-        <h3>Personal Portfolio Website</h3>
-        <p>Designed and developed a responsive multi-page portfolio website using only HTML and CSS. Showcases my skills, projects, and professional story with creative visuals and smooth navigation.</p>
-        <a href="https://github.com/yourusername/portfolio" target="_blank">View on GitHub</a>
-      </article>
-
-      <article class="project-card">
-        <h3>Budget Management Dashboard</h3>
-        <p>Led the creation of a budget tracking dashboard for Heart University, integrating data visualization to monitor expenditures and optimize resources effectively.</p>
-        <em>Confidential Project</em>
-      </article>
-
-      <article class="project-card">
-        <h3>Responsive Recipe Website</h3>
-        <p>Developed a multi-page recipe website demonstrating HTML structuring and CSS Grid for layout, focusing on clean design and usability.</p>
-        <a href="https://github.com/yourusername/recipe-website" target="_blank">View on GitHub</a>
-      </article>
-    </section>
+    <!-- Your main content goes here -->
   </main>
 
   <footer>
     &copy; 2025 Elham Khatibi. All rights reserved.
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav-links');
+      nav.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
